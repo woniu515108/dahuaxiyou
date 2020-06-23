@@ -1,0 +1,442 @@
+/* common */
+.text-left{
+    text-align: left;
+}
+.orange{
+    color: #fc5600;
+}
+/* 登录弹窗 */
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    position: fixed;
+    z-index: 99;
+    display: none;
+}
+.login{
+    width: 480px;
+    height: 480px;
+    border:1px solid #D5D5D5;
+    display: none;
+    position: fixed;
+    z-index: 100;
+    background: #fff;
+    left: 50%;
+    margin-left: -240px;
+    top: 50%;
+    margin-top: -240px;
+}
+.login h2{
+    background: #eee;
+    height: 42px;
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    padding:0 10px;
+    line-height: 42px;
+}
+.login h2 span{
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.login h2 span:hover{
+    font-size: 16px;
+    color: #e34d00;
+}
+.login_tab{
+    padding:20px;
+}
+.login_tab_title{
+    display: flex;
+    justify-content: space-around;
+}    
+.login_tab_title li{
+    width: 50%;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    line-height: 30px;
+} 
+.login_tab_title li.select{
+    color: #e34d00;
+    border-bottom: 1px solid #e34d00;
+} 
+.login_tab_title li:hover{
+    cursor: pointer;
+}
+.login_tab_title li:first-child{
+    border-right: 1px solid #eee;
+}
+.email_uname,.email_upwd,.phone_uname{
+    width: 420px;
+    height: 46px;
+    border: 1px solid #c5cddb;
+    padding: 0 40px;
+}    
+.email_uname{
+    margin:20px 0;
+    background: url(../images/uname.jpg) no-repeat 10px;
+}              
+.email_upwd{
+    background: url(../images/upwd.jpg) no-repeat 10px;
+}  
+.phone_uname{
+    margin:20px 0;
+    background: url(../images/phone.jpg) no-repeat 10px;
+}   
+.login_email{
+    display: none;
+}         
+.login_email p{
+    background: url(../images/anquan.png) no-repeat left center;
+    padding-left: 20px;
+    font-size: 12px;
+    margin:6px 0;
+}
+.login_email p a{
+    color: #4aafe9;
+}
+.btn_login{
+    width: 420px;
+    height: 44px;
+    background: #fc5600;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.regonize{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+.use_meaages{
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.use_meaages span{
+    float: right;
+    font-size: 12px;
+    line-height: 28px;
+}
+.agree{
+    padding:20px;
+}
+.agree span{
+    font-size: 12px;
+    border:1px solid #e34d00;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.agree p{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.inp_check{
+    margin-right: 6px;
+}
+.login_tab_content>div{
+    display: none;
+}
+/* head-top */
+.head-top{
+    height: 30px;
+    line-height: 28px;
+    border:1px solid #eaeaea;
+    font-size: 12px;
+    color: #666;
+}
+.head-top-center,.banner-center{
+    width: 1154px;
+    margin:0px auto;
+    display: flex;
+    justify-content: space-between;  /*两端对齐，项目之间的间隔都相等*/
+}
+.center-left{
+    display: flex;
+    justify-content: flex-start;  /*左对齐*/
+}
+.game-select{
+    margin-right: 10px;
+    position: relative;
+}
+.game-select a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+#game-list li{
+    text-align: center;
+}
+.welcome a{
+    padding: 0 5px;
+}
+.center-right,.right-item{
+    display: flex;
+    justify-content: flex-end;  /*右对齐*/
+}
+.right-item li{
+    padding: 0 5px;
+    text-align: center;
+}
+.right-item li ul li{
+    padding: 0 5px;
+}
+#shop,#more{
+    position: relative;
+}
+.game-list,#my-shop,#more-list{
+    display: none;
+    position: absolute;
+    left: 0;
+    border:1px solid #eaeaea;
+    border-top: none;
+    width: 80px;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 10;
+}
+#game,#shop,#more{
+    width: 80px;
+}
+/* head-banner */
+.banner-center{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.search form{
+    width: 179px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 26px;
+}
+.serach-text{
+    width: 146px;
+    padding: 0 4px;
+    height: 30px;
+    line-height: 30px;
+    border:1px solid #eaeaea;
+    font-size: 12px;
+}
+.search-submit{
+    border:1px solid #eaeaea;
+    background: none;
+    font-size: 12px;
+    color: #666;
+    padding: 0 4px;
+    border-left: none;
+}
+.shop-car{
+    font-size: 14px;
+    color: #666;
+    margin-top: 26px;
+}
+.shop-car span{
+    color: #fc5600;
+}
+/* menu */
+.menu-con{
+    background: #fc5600;
+    height: 42px;
+}
+.menu{
+    margin:0 auto;
+    width: 1154px;
+}
+.menu>ul{
+    display: flex;
+    justify-content: flex-start;
+    background: none;
+    line-height: 42px;
+}
+.menu>ul>li>a{
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    padding: 0 30px;
+    height: 42px;
+}
+.menu>ul>li>a:hover{
+    background: #e34d00;
+    transition: all .5s linear;
+}
+.menu>ul>li>a span{
+    background: #fff;
+    padding:0 3px;
+    border-radius: 4px;
+    color: #ff0000;
+    font-size: 12px;
+    margin-left: 4px;
+}
+.all-select{
+    position: relative;
+}
+#select-border{
+    position: absolute;
+    width: 1154px;
+    border:1px solid #fc5600;
+    border-top: none;
+    padding: 50px 20px;
+    display: none;
+    overflow: hidden;
+    background: #fff;
+    z-index: 10;
+}
+.produ-select{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    padding: 20px 0;
+}
+.produ-select a{
+    color: #666;
+}
+.produ-select a:hover{
+    color: #fc5600;
+}
+.produ-select h3 a{
+    color: #fc5600;
+}
+
+/* footer-all */
+/* 正售邮听 */
+.sales{
+    margin:30px auto;
+    width: 1154px;
+}
+.sales .sales-head{
+    display: flex;
+    justify-content: space-between;
+}
+.sales .sales-head h3 a{
+    font-size: 16px;
+    color: #fc5600;
+}
+.sales .sales-head span{
+    font-size: 12px;
+}
+.sales-content{
+    margin-top:30px;
+}
+.sales-content>ul{
+    display: flex;
+    justify-content: space-between; 
+}
+.sales-content>ul>li{
+    width: 289px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #eaeaea;
+}
+.sales-content>ul>li:hover{
+    cursor: pointer;
+}
+.sales-content>ul>li:hover .text{
+    margin-bottom: 6px;
+    box-shadow: 0px 2px 1px 2px #fc5600;
+    transition: all .3s linear;
+}
+.sales-content>ul>li:last-child{
+    border-right: none;
+}
+.sales-content>ul>li .text{
+    width: 54px;
+    height: 54px;
+    border-radius: 27px;
+    border:1px solid #fc5600;
+    text-align: center;
+    line-height: 48px;
+    color: #fc5600;
+    font-size: 26px;
+    margin-right: 20px;
+}
+.sales-content>ul>li>ul>li>h4{
+    font-size: 18px;
+    color: #fc5600;
+}
+.sales-content>ul>li>ul>li>p{
+    font-size: 12px;
+    color: #666;
+    line-height: 24px;
+}
+/* 购物指南 */
+.guide{
+    width: 1154px;
+    margin:60px auto;
+    border:1px solid #eaeaea;
+    padding: 20px 0;
+}
+.guide ul{
+    display: flex;
+    justify-content: space-between;  
+}
+.guide ul li{
+    width: 231px;
+    height: 110px;
+    border-right: 1px solid #eaeaea;
+    text-align: left;
+    padding-left: 50px;
+}
+.guide ul li h4{
+    margin-bottom: 10px;
+}
+.guide ul li p{
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+}
+.guide ul li p:last-child{
+    color: #fc5600;
+}
+/* footer */
+.footer{
+    width: 1024px;
+    margin:30px auto;
+}
+.copy{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.copy-left{
+    margin-right: 50px;
+}
+.copy-right ul{
+    display: flex;
+    justify-content: flex-start;
+}
+.copy-right ul li{
+    margin-right: 3px;
+}
+.copy-bottom{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+}
+.copy-bottom a{
+    display: block;
+    background-color: #610000;
+    color: #fff;
+    padding: 2px 6px;
+}
+.footer>p{
+    font-size: 12px;
+    color: #666;
+    line-height: 30px;
+}
